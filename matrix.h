@@ -1,21 +1,21 @@
 #include <ctime>
 #include <iostream>
 
-void initializeMatrix(int**& outMatrix, int size) {
+void matrixInitialize(int**& outMatrix, int size) {
     outMatrix = new int* [size];
     for (int i = 0; i < size; i++)
         outMatrix[i] = new int[size];
 }
 
-void generateMatrix(int** outMatrix, int size, int start, int end) {
+void matrixGenerate(int** outMatrix, int size, int start, int end) {
     for (int i = 0; i < size; i++)
         for (int j = 0; j < size; j++)
             outMatrix[i][j] = rand() % (end - start + 1) + start;
 }
 
-void splitMatrix(int** matrix, int finalSize, int*** outMatrices) {}
+void matrixSplit(int** matrix, int finalSize, int*** outMatrices) {}
 
-void multiplyMatrix(int** matrix1, int** matrix2, int size, int** outMatrix) 
+void matrixMultiply(int** matrix1, int** matrix2, int size, int** outMatrix) 
 {
     for (int i = 0; i < size; i++)
     {
@@ -29,14 +29,14 @@ void multiplyMatrix(int** matrix1, int** matrix2, int size, int** outMatrix)
     }
 }
 
-void additionMatrix(int** matrix1, int** matrix2, int size, int** outMatrix) 
+void matrixAddition(int** matrix1, int** matrix2, int size, int** outMatrix) 
 {
     for (int i = 0; i < size; i++)
         for (int j = 0; j < size; j++)
             outMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
 }
 
-void disposeMatrix(int**& outMatrix, int size) {
+void matrixDispose(int**& outMatrix, int size) {
     for (int i = 0; i < size; i++)
         delete[] outMatrix[i];
 
@@ -44,7 +44,7 @@ void disposeMatrix(int**& outMatrix, int size) {
     outMatrix = nullptr;
 }
 
-void printMatrix(int** matrix, int size)
+void matrixPrint(int** matrix, int size)
 {
     for (int i = 0; i < size; i++)
     {
