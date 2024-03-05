@@ -22,11 +22,10 @@ int main(int argc, char** argv) {
         int*** subMatrices1, *** subMatrices2;
         splitMatrices(matrix1, matrix2, subMatrices1, subMatrices2);
 
-        //i
-        //j
-        // 
-        //k
-        //l
+        // Some code here ... 
+
+        freeMatrices(matrix1, matrix2, resultMatrix);
+        freeSubMatrices(subMatrices1, subMatrices2);
     }
     else {
         

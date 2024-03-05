@@ -16,3 +16,18 @@ void splitMatrices(int** matrix1, int** matrix2, int*** outSubMatrices1, int*** 
     splitMatrix(matrix1, PART_SIZE, outSubMatrices1);
     splitMatrix(matrix2, PART_SIZE, outSubMatrices2);
 }
+
+void freeMatrices(int** matrix1, int** matrix2, int** matrix3) {
+    disposeMatrix(matrix1,MATRIX_SIZE);
+    disposeMatrix(matrix2, MATRIX_SIZE);
+    disposeMatrix(matrix3, MATRIX_SIZE);
+}
+
+void freeSubMatrices(int*** subMatrix1, int*** subMatrix2) {
+    for (int i = 0; i < Parts; i++) {
+        disposeMatrix(subMatrix1[i], PART_SIZE);
+        disposeMatrix(subMatrix2[i], PART_SIZE);
+    }
+    free(subMatrix1);
+    free(subMatrix2);
+}
