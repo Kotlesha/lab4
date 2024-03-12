@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClInclude Include="constants.h" />
     <ClInclude Include="matrix.h" />
+    <ClInclude Include="mpi_communication.h" />
     <ClInclude Include="rank_zero_functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
